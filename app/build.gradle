@@ -1,15 +1,19 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion rootProject.ext.compileSdk
-    buildToolsVersion rootProject.ext.buildTools
+    namespace 'com.modern.lanchat' // It's good to define namespace
+    compileSdk 34 // Use direct value
 
     defaultConfig {
-        applicationId rootProject.ext.appId
-        minSdkVersion rootProject.ext.minSdk
-        targetSdkVersion rootProject.ext.targetSdk
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName 
+        applicationId "com.modern.lanchat" // Use direct value
+        minSdk 24    // Use direct value
+        targetSdk 34 // Use direct value
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -18,20 +22,38 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
     compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
-	}
-	
-	lintOptions {
-	    abortOnError false
-	}
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Enable ViewBinding for easier access to views in Java
+    buildFeatures {
+        viewBinding true
+    }
+
+    // Remove or comment out lintOptions if not strictly needed for now
+    // lintOptions {
+    //     abortOnError false
+    // }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    // implementation fileTree(dir: "libs", include: ["*.jar"]) // Usually not needed with modern dependency management
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Use more recent versions
+    implementation 'com.google.android.material:material:1.11.0' // Use more recent versions
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // RecyclerView for displaying lists like chat messages or rooms
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // For lifecycle-aware components
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.6.2'
+    implementation 'androidx.activity:activity:1.8.2'
+
+    // Testing libraries
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
