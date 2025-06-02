@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity"> <!-- Or ChatRoomActivity if you name it that -->
+    tools:context=".ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChat" <!-- THE IMPORTANT ID -->
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMessages"
@@ -13,11 +25,11 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:clipToPadding="false"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintTop_toBottomOf="@id/toolbarChat" <!-- CONSTRAIN BELOW TOOLBAR -->
+        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_chat_message_sent" /> <!-- Placeholder, we'll make two: sent and received -->
+        tools:listitem="@layout/item_chat_message_sent" />
 
     <View
         android:id="@+id/divider"
@@ -42,6 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- ... rest of your input layout (EditText, Button) ... -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutMessage"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -79,11 +92,6 @@
             android:textColor="@color/white"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
             android:contentDescription="@string/button_send" />
-            <!--
-                 Note: For app:iconTint to work consistently on MaterialButton,
-                 ensure your Material Components library version is fairly recent (e.g., 1.3.0+).
-                 If not, you might need to set the icon programmatically or use an ImageButton.
-            -->
     </LinearLayout>
 
     <ProgressBar
