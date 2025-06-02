@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share_room_id"
+        android:title="Share Room ID"
+        android:icon="@drawable/ic_share" <!-- You'll need a share icon -->
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_terminate_room"
+        android:title="Terminate Room"
+        app:showAsAction="never" /> <!-- "never" places it in the overflow menu -->
+</menu>
