@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_share_room_id"
+ android:id="@+id/action_share_room_id"
         android:title="Share Room ID"
-        android:icon="@drawable/ic_share" <!-- You'll need a share icon -->
+        android:icon="@drawable/ic_share" 
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_terminate_room"
         android:title="Terminate Room"
-        app:showAsAction="never" /> <!-- "never" places it in the overflow menu -->
+        app:showAsAction="never" />
 </menu>
