@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Modern LAN Chat</string>
+
+    <!-- MainActivity UI -->
+    <string name="hint_enter_room_number">Enter Room Number</string>
+    <string name="button_create_room">Create Room</string>
+    <string name="button_join_room">Join Room</string>
+    <string name="label_or">OR</string>
+    <string name="label_no_rooms_available">No rooms discovered yet. Try creating one!</string>
+    <string name="label_available_rooms">Available Rooms:</string>
+    <string name="label_your_ip_address">Your IP: %1$s</string>
+    <string name="label_hosting_room">Hosting Room: %1$s</string>
+
+    <!-- ChatActivity UI -->
+    <string name="hint_type_a_message">Type a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_chat_room">Chat Room %1$s</string>
+    <string name="message_you">You: %1$s</string>
+    <string name="message_other_user">%1$s: %2$s</string> <!-- Placeholder for sender name and message -->
+    <string name="user_joined_chat">%1$s joined the chat.</string>
+    <string name="user_left_chat">%1$s left the chat.</string>
+
+    <!-- Network related -->
+    <string name="error_failed_to_create_room">Failed to create room. Port might be in use.</string>
+    <string name="error_failed_to_join_room">Failed to join room. Host not found or connection refused.</string>
+    <string name="error_invalid_room_number">Invalid room number.</string>
+    <string name="error_network_error">Network error. Please check your connection.</string>
+    <string name="message_disconnected">Disconnected from chat.</string>
+    <string name="connecting_to_room">Connecting to room %1$s...</string>
+    <string name="connected_to_room">Connected to room %1$s</string>
+    <string name="discovery_started">Looking for rooms on the network...</string>
+    <string name="discovery_stopped">Room discovery stopped.</string>
+
+    <!-- Dialogs / General -->
+    <string name="dialog_title_enter_name">Enter Your Name</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="error_name_required">Name is required.</string>
+    <string name="share_room_title">Share Room Number</string>
+    <string name="share_room_text">Join my LAN Chat room! Room Number: %1$s</string>
+
+</resources>

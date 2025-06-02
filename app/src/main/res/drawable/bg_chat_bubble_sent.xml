@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/chat_bubble_sent" /> <!-- Use color defined in colors.xml -->
+    <corners
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="4dp"
+        android:topLeftRadius="16dp"
+        android:topRightRadius="16dp" />
+    <!--
+        Adjust corner radii to get different bubble shapes.
+        For example, making bottomLeftRadius smaller and bottomRightRadius larger
+        can create a "tail" effect for messages.
+        The current setup gives a slightly asymmetric rounded rectangle, common for sent messages.
+    -->
+</shape>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Palette -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Modern App Specific Colors -->
+    <color name="primaryColor">#2196F3</color> <!-- Blue -->
+    <color name="primaryLightColor">#64B5F6</color>
+    <color name="primaryDarkColor">#1976D2</color>
+    <color name="secondaryColor">#4CAF50</color> <!-- Green -->
+    <color name="secondaryLightColor">#81C784</color>
+    <color name="secondaryDarkColor">#388E3C</color>
+    <color name="textColorPrimary">#DE000000</color> <!-- 87% Black for text -->
+    <color name="textColorSecondary">#8A000000</color> <!-- 54% Black for secondary text -->
+    <color name="windowBackground">#F5F5F5</color> <!-- Light Grey Background -->
+    <color name="statusBarColor">@color/primaryDarkColor</color>
+    <color name="appBarColor">@color/primaryColor</color>
+
+    <!-- Chat Bubble Colors -->
+    <color name="chat_bubble_sent">#E1F5FE</color> <!-- Light blue for sent messages -->
+    <color name="chat_bubble_received">#FFFFFF</color> <!-- White for received messages -->
+    <color name="chat_text_sent">@color/textColorPrimary</color>
+    <color name="chat_text_received">@color/textColorPrimary</color>
+    <color name="chat_timestamp">@color/textColorSecondary</color>
+
+    <!-- UI Elements -->
+    <color name="button_background_tint">@color/primaryColor</color>
+    <color name="button_text_color">@color/white</color>
+    <color name="editText_background_tint">#1F000000</color> <!-- Slight tint for EditText background -->
+    <color name="divider_color">#1F000000</color> <!-- 12% Black for dividers -->
+
+</resources>

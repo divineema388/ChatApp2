@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '8.2.1' apply false // Or your current Android Gradle Plugin version
+    // id 'com.android.library' version '8.2.1' apply false // If you had library modules
+}
+
+// It's good practice to define versions in a central place,
+// but for a simple project, direct specification is fine for now.
+
+// You can also define common repositories here
+// allprojects {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+// }
+
+// Task to clean the build directory
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

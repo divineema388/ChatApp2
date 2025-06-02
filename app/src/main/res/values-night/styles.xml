@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for dark mode. -->
+    <style name="Theme.ModernLanChat" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryLightColor</item> <!-- Lighter primary for dark theme -->
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/black</item> <!-- Text on primary surfaces -->
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryLightColor</item> <!-- Lighter secondary for dark theme -->
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/black</item> <!-- Text on secondary surfaces -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">#121212</item> <!-- Standard dark background -->
+        <item name="android:textColorPrimary">#E0E0E0</item> <!-- Lighter text for dark theme -->
+        <item name="android:textColorSecondary">#BDBDBD</item> <!-- Lighter secondary text -->
+
+        <!-- You might want to adjust other colors for dark mode, e.g., button backgrounds or chat bubbles -->
+        <!-- For example, chat bubbles might need different background colors in dark mode -->
+        <!-- <item name="chatBubbleSent">@color/your_dark_chat_bubble_sent</item> -->
+        <!-- <item name="chatBubbleReceived">@color/your_dark_chat_bubble_received</item> -->
+
+        <!-- For Material3 components, if you upgrade later -->
+        <!-- <item name="colorPrimary">@color/m3_sys_color_dark_primary</item> -->
+        <!-- <item name="colorOnPrimary">@color/m3_sys_color_dark_on_primary</item> -->
+        <!-- <item name="colorPrimaryContainer">@color/m3_sys_color_dark_primary_container</item> -->
+        <!-- <item name="colorOnPrimaryContainer">@color/m3_sys_color_dark_on_primary_container</item> -->
+        <!-- ... and so on for other Material3 color roles -->
+    </style>
+
+    <!-- Optional: A theme without an ActionBar for dark mode -->
+    <style name="Theme.ModernLanChat.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryLightColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/secondaryLightColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:textColorPrimary">#E0E0E0</item>
+        <item name="android:textColorSecondary">#BDBDBD</item>
+    </style>
+
+</resources>
