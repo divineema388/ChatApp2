@@ -44,6 +44,11 @@ dependencies {
     implementation 'com.google.android.material:material:1.11.0' // Use more recent versions
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
+    // Room Persistence Library
+    def room_version = "2.6.1" // Use the latest stable version
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version" // For Java
+
     // RecyclerView for displaying lists like chat messages or rooms
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
 
