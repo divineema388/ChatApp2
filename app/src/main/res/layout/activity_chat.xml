@@ -7,7 +7,7 @@
     tools:context=".ChatActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarChat" <!-- THE IMPORTANT ID -->
+        android:id="@+id/toolbarChat"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -25,7 +25,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/toolbarChat" <!-- CONSTRAIN BELOW TOOLBAR -->
+        app:layout_constraintTop_toBottomOf="@id/toolbarChat"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,8 +53,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- ... rest of your input layout (EditText, Button) ... -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutMessage"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
