@@ -7,8 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- Required for Wi-Fi P2P or NSD (Network Service Discovery) -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" /> <!-- Important for mDNS/NSD -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,22 +15,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ModernLanChat" <!-- Default theme for the app -->
-        tools:targetApi="31"
+        android:theme="@style/Theme.ModernLanChat"
+        tools:targetApi="31" <!-- This requires xmlns:tools -->
         android:usesCleartextTraffic="true">
-        <!--
-            android:usesCleartextTraffic="true" is added for simplicity in local LAN communication.
-            For production apps connecting to the internet, this should generally be false,
-            and HTTPS should be used. For a LAN-only app, it's often acceptable.
-            Removed android:dataExtractionRules and android:fullBackupContent as they were not in your provided manifest
-            and are not critical for this fix. You can add them back if your project template had them.
-        -->
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
-            <!-- MainActivity uses the application theme: Theme.ModernLanChat -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -41,17 +32,14 @@
         <activity
             android:name=".ChatActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.ModernLanChat.NoActionBar" <!-- APPLY THE .NoActionBar THEME HERE -->
+            android:theme="@style/Theme.ModernLanChat.NoActionBar"
             android:windowSoftInputMode="adjustResize">
-            <!-- android:parentActivityName provides Up navigation -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
 
         <!--
-        A service might be useful later for more robust background network handling,
-        especially for the host, but for now, we're doing it within activities.
         <service android:name=".network.ChatNetworkService" />
         -->
 
